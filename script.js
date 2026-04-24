@@ -1,5 +1,13 @@
 const APIKEY = "gFO397I9a7aqiG6ngJ2HtecIRX8G05YK";
 const form = document.getElementById("form");
+document.getElementById("date").valueAsDate = new Date();
+
+document.getElementById("swap").addEventListener("click", () => {
+    const fromEl = document.getElementById("from");
+    const toEl = document.getElementById("to");
+
+    [fromEl.value, toEl.value] = [toEl.value, fromEl.value];
+});
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
